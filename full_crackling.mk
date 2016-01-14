@@ -21,6 +21,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from crackling device
 $(call inherit-product, device/wileyfox/crackling/device.mk)
 
+# Build gcko as 32bit on 64bit build target
+BUILD_MULTILIB_GECKO_AS_2ND_ARCH := true
+
 # for Gecko to use the correct resolution assets
 # Valid options are: 1.5 | 2 | 2.25
 GAIA_DEV_PIXELS_PER_PX := 2
