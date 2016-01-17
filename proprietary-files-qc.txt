@@ -17,7 +17,6 @@ vendor/lib/libacdbrtac.so
 vendor/lib/libadiertac.so
 vendor/lib/libaudcal.so
 vendor/lib/libFlacSwDec.so
--vendor/lib/libqct_resampler.so
 vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
@@ -274,7 +273,6 @@ bin/rmt_storage
 etc/permissions/com.qrd.wappush.xml
 etc/permissions/qcnvitems.xml
 etc/permissions/qcrilhook.xml
--framework/com.qrd.wappush.jar
 -framework/qcnvitems.jar
 -framework/qcrilhook.jar
 lib64/librmnetctl.so
