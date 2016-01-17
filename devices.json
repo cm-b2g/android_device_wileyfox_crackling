@@ -1,0 +1,13 @@
+[
+  {
+    "id": "Wileyfox Swift",
+    "adb": {
+      "ro.product.device": [ "crackling" ],
+      "ro.bootloader": "crackling-12-ge9dcde6",
+      "ro.build.id": ["LMY48Y"]
+    },
+    "fastboot": {
+      "product": [ "MSM8916" ]
+    }
+  }
+]
