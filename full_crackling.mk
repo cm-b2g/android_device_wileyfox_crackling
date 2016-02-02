@@ -24,6 +24,9 @@ $(call inherit-product, device/wileyfox/crackling/device.mk)
 # Inherit directly from B2G
 $(call inherit-product, vendor/cm/config/common_full.mk)
 
+# Build gcko as 32bit on 64bit build target
+BUILD_MULTILIB_GECKO_AS_2ND_ARCH := true
+
 # for Gecko to use the correct resolution assets
 # Valid options are: 1.5 | 2 | 2.25
 GAIA_DEV_PIXELS_PER_PX := 2
@@ -35,7 +38,8 @@ BOOTANIMATION_ASSET_SIZE := 720p
 # for Gecko to support usb mass storage
 # You may need to add mass_storage to init.oem.usb.rc
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mass_storage
+    persist.sys.usb.config=mass_storage \
+    ro.adb.secure=0
 
 # for Gecko to support virtual home button
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -47,10 +51,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.moz.ril.numclients=2 \
     ro.moz.ril.subscription_control=true
 
+# HACK: Build gecko with 4.8 toolchain
+# GECKO_TOOLS_PREFIX = prebuilts/gcc/$(HOST_PREBUILT_TAG)/arm/arm-linux-androideabi-4.8/bin/arm-linux-androideabi-
+
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := crackling
 PRODUCT_NAME := full_crackling
 PRODUCT_BRAND := Wileyfox
 PRODUCT_MODEL := Wileyfox Swift
 PRODUCT_MANUFACTURER := Wileyfox
-
+TARGET_VENDOR_PRODUCT_NAME := Swift
+TARGET_VENDOR_DEVICE_NAME := crackling
