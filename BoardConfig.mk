@@ -74,6 +74,8 @@ TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 BOARD_SEPOLICY_DIRS += \
     device/wileyfox/crackling/sepolicy
 
+# Inherit from CM directly
+-include vendor/cm/BoardConfig.mk
 
 # inherit from the proprietary version
 -include vendor/wileyfox/crackling/BoardConfigVendor.mk

@@ -21,6 +21,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from crackling device
 $(call inherit-product, device/wileyfox/crackling/device.mk)
 
+# Inherit from cm-b2g
+$(call inherit-product-if-exists, vendor/cm/config/common_full.mk)
+
 TARGET_DEVICE_BLOBS_LIST := true
 TARGET_DEVICE_BLOBS_SRC_DIR := vendor/wileyfox/crackling/proprietary
 TARGET_DEVICE_BLOBS := \
