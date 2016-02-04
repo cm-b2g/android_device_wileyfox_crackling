@@ -17,6 +17,9 @@
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
 
+/* B2G common configuration. */
+#include "b2g_bdroid_buildcfg.h"
+
 #define BTM_DEF_LOCAL_NAME   "Wileyfox Swift"
 #define BLUETOOTH_QTI_SW TRUE
 #define MAX_ACL_CONNECTIONS    7

@@ -31,7 +31,9 @@ TARGET_KERNEL_CONFIG := cyanogenmod_crackling-64_defconfig
 WITH_DEXPREOPT_BOOT_IMG_ONLY ?= true
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := \
+    $(DEVICE_PATH)/bluetooth \
+    hardware/libhardware_moz/include/hardware_moz/bluetooth/bluedroid
 
 # Camera
 BOARD_CAMERA_SENSORS := s5k5e2_olq5f19 s5k3m2_olqba20
