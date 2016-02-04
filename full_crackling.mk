@@ -56,6 +56,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.moz.ril.numclients=2 \
     ro.moz.ril.subscription_control=true
 
+#OSS Time solution
+PRODUCT_PACKAGES += \
+    timekeep \
+    TimeKeep \
+
+PRODUCT_COPY_FILES += \
+    hardware/sony/timekeep/gecko/TimeKeepService.js:system/b2g/distribution/bundles/timekeep/TimeKeepService.js \
+    hardware/sony/timekeep/gecko/chrome.manifest:system/b2g/distribution/bundles/timekeep/chrome.manifest
+
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := crackling
 PRODUCT_NAME := full_crackling
