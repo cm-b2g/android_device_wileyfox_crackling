@@ -32,6 +32,12 @@ on early-init
     #set non-stand-charger can used
     write /sys/module/phy_msm_usb/parameters/floated_charger_enable Y
 
+on init
+    # Second SIM
+    symlink /dev/socket/rild1 /dev/socket/rilproxy1
+    chown radio radio /dev/socket/rilproxy1
+    chmod 0660 /dev/socket/rilproxy1
+
 on boot
     # charger
     chown system system /sys/bus/i2c/drivers/lc709203/batt_capacity

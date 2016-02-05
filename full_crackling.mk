@@ -52,8 +52,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # for Gecko to support Dual SIM
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.radio.multisim.config=dsds \
     ro.moz.ril.numclients=2 \
+    ro.moz.ril.0.network_types=gsm,wcdma,lte \
+    ro.moz.ril.1.network_types=gsm,wcdma,lte \
+    ro.moz.ril.emergency_by_default=true \
     ro.moz.ril.subscription_control=true
 
 #OSS Time solution
